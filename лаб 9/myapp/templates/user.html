@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+  <head><meta charset="utf-8"><title>User {{ user.name }}</title></head>
+  <body>
+    <h1>{{ user.name }}</h1>
+    <h2>Subscriptions</h2>
+    <ul>
+      {% for c in subscriptions %}
+      <li>{{ c.char_code }} — {{ c.name }}: {{ c.value }} (nominal {{ c.nominal }})</li>
+      {% else %}
+      <li>No subscriptions</li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
